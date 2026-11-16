@@ -37,6 +37,11 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
+      - name: Make gradlew executable
+        # 經網頁介面上載嘅 gradlew 無可執行權限（mode 644），直接行 ./gradlew
+        # 會 Permission denied。喺度補返 chmod，唔使靠 git 嘅執行位元。
+        run: chmod +x gradlew
+
       - name: Build patches bundle
         env:
           # settings.gradle.kts 用 System.getenv("GITHUB_TOKEN") 攞 token 去讀 MorpheApp 嘅
