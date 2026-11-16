@@ -77,8 +77,8 @@ val skipProfileSelectPatch = bytecodePatch(
             addInstructionsWithLabels(
                 6,
                 """
-                    iget-object v7, v6, Lcom/cht/ottPlayer/ui/MainActivity$2$9;->this$1 Lcom/cht/ottPlayer/ui/MainActivity$2;
-                    iget-object v7, v7, Lcom/cht/ottPlayer/ui/MainActivity$2;->this$0 Lcom/cht/ottPlayer/ui/MainActivity;
+                    iget-object v7, v6, Lcom/cht/ottPlayer/ui/MainActivity$2$9;->this$1:Lcom/cht/ottPlayer/ui/MainActivity$2;
+                    iget-object v7, v7, Lcom/cht/ottPlayer/ui/MainActivity$2;->this$0:Lcom/cht/ottPlayer/ui/MainActivity;
                     invoke-static {v7}, Lcom/cht/ottPlayer/util/AccountManager;->c(Landroid/content/Context;)Lcom/cht/ottPlayer/model/Login;
                     move-result-object v1
                     if-eqz v1, :morphe_fallthrough
@@ -88,7 +88,7 @@ val skipProfileSelectPatch = bytecodePatch(
                     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
                     move-result v2
                     if-nez v2, :morphe_fallthrough
-                    sget-object v7, Lcom/cht/ottPlayer/App;->p Ljava/util/List;
+                    sget-object v7, Lcom/cht/ottPlayer/App;->p:Ljava/util/List;
                     if-eqz v7, :morphe_fallthrough
                     invoke-interface {v7, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
                     move-result v2
