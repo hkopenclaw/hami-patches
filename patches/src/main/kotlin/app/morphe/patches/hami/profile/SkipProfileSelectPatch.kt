@@ -58,10 +58,10 @@ private object SetDeviceUserProfileIdFingerprint : Fingerprint(
     ),
     filters = listOf(
         methodCall(
-            "Lcom/cht/ottPlayer/OttService;->l2(Landroid/content/Context; Ljava/lang/String; Ljava/lang/String;)Lio/reactivex/Flowable;"
+            "Lcom/cht/ottPlayer/OttService;->l2(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/Flowable;"
         ),
         methodCall(
-            "Lcom/cht/ottPlayer/ui/UserProfileSelectActivity\$16;-><init>(Landroid/content/Context; Ljava/lang/String; Ljava/util/List; Z Landroid/content/Context; Lcom/cht/ottPlayer/util/OnNextListener;)V"
+            "Lcom/cht/ottPlayer/ui/UserProfileSelectActivity\$16;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;ZLandroid/content/Context;Lcom/cht/ottPlayer/util/OnNextListener;)V"
         ),
     )
 )
