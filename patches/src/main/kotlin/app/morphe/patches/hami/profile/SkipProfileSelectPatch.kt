@@ -92,12 +92,12 @@ val recordProfileChoicePatch = bytecodePatch(
                     const/4 v1, 0x0
                     invoke-virtual {v7, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
                     move-result-object v0
-                    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+                    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences${'$'}Editor;
                     move-result-object v0
                     const-string v1, "last_profile_id"
-                    invoke-interface {v0, v1, v8}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+                    invoke-interface {v0, v1, v8}, Landroid/content/SharedPreferences${'$'}Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences${'$'}Editor;
                     move-result-object v0
-                    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+                    invoke-interface {v0}, Landroid/content/SharedPreferences${'$'}Editor;->apply()V
                 """,
             )
         }
